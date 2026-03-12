@@ -85,6 +85,19 @@ class AB{
         echo "</table>";
     }
 
+    public function kartyakDivben($kartyak){
+        echo "<div class='kartyak'>";
+
+        foreach ($kartyak as $kartya) {
+            echo "<div class='kartya'>";
+            echo "<div class='kep'><img src='forras/".$kartya->getSzin()."' alt='".$kartya->getForma()."'></div>";
+            echo "<p>".$kartya->getForma()."</p>";
+            echo "</div>";
+        }
+
+        echo "</div>";
+    }
+
     public function meret($tabla){
         $sql = "SELECT * FROM $tabla";
         return $this->kapcsolat->query($sql)->num_rows;

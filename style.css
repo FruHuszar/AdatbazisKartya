@@ -1,0 +1,56 @@
+:root {
+  --radius: 5px;
+  --szin-bg: beige;
+  --szin-kartya: whitesmoke;
+  --szin-betu: black;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--szin-bg);
+  color: var(--szin-betu);
+}
+
+.kartyak {
+  width: 90vw;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+}
+
+.kartya {
+  max-width: 100px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: var(--radius);
+  background-color: var(--szin-kartya);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kartya p {
+  border-top: 1px solid grey;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+@media (max-width: 468px) {
+  .kartyak {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+}
