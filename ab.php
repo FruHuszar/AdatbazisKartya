@@ -126,5 +126,13 @@ class AB{
         return $matrix->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function tombMatrixMegjelenitese($tombMatrix){
+        foreach($tombMatrix as $sor){
+            foreach($sor as $kulcs => $ertek){
+                echo "Kulcs: $kulcs, ertek: $ertek<br>";
+            }
+        }
+    }
+
 }
 ?>

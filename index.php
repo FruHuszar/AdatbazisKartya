@@ -31,7 +31,11 @@
         $objektumMatrix = $adatbazis->kartyakBeolvasasa();
         $kartyak = $adatbazis->kartyaObjektumok($objektumMatrix);
         $adatbazis->kartyakDivben($kartyak);
+        /*$tombMatrix = $adatbazis->tombbeAlakit($objektumMatrix);
+        $adatbazis->tombMatrixMegjelenitese($tombMatrix);*/
+
         $adatbazis->kapcsolatLezar();
+        
      ?>
 </body>
 </html>
